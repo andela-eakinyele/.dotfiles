@@ -1,0 +1,14 @@
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+ln -sfv "$DOTFILES_DIR/.inputrc" ~
+
+# ~/.extra can be used for other settings you don’t want to commit.
+for file in $DOTFILES_DIR/.{bash_prompt,exports,aliases,functions}; do
+ 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+done;
+
+for file in $EXTRA_DIR/.{aliases,}; do
+	echo "$file"
+ 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+done;
