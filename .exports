@@ -1,12 +1,6 @@
 export EDITOR="subl -w"
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
-export DOTFILES_DIR="$HOME/.dotfiles"
-export EXTRA_DIR="$HOME/.extra"
-export NVM_DIR="$HOME/.nvm"
-
-# Tell grep to highlight matches
-export GREP_OPTIONS='—color=auto'
 
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/sbin:/usr/local/go/bin:$DOTFILES_DIR/bin"
@@ -28,5 +22,3 @@ export PYTHONIOENCODING='UTF-8';
 
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
-
-

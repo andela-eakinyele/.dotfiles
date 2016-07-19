@@ -1,5 +1,7 @@
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
+export NVM_DIR="$HOME/.nvm"
+export DOTFILES_DIR="$HOME/.dotfiles"
+export EXTRA_DIR="$HOME/.extra"
 
 ln -sfv "$DOTFILES_DIR/.inputrc" ~
 
@@ -9,6 +11,8 @@ for file in $DOTFILES_DIR/.{bash_prompt,exports,aliases,functions}; do
 done;
 
 for file in $EXTRA_DIR/.{aliases,}; do
-	echo "$file"
- 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done;
+
+source $HOME/workSpace/git-subrepo/.rc
+source /usr/local/bin/virtualenvwrapper.sh
